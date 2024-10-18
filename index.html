@@ -9,31 +9,48 @@
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f8f9fa;
             color: #212529;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5em;
-        }
-        .container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 20%;
+            background: #343a40;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #ccc;
+        }
+        .sidebar ul li a:hover {
+            color: #fff;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
         }
         .section {
-            flex: 1 1 45%;
             background: white;
             padding: 20px;
+            margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-        .section:hover {
-            transform: scale(1.02);
         }
         .section h2 {
             cursor: pointer;
@@ -45,14 +62,9 @@
             display: none;
             margin-top: 10px;
         }
-        img {
-            width: 100%;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
         .footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 20px;
             font-size: 0.9em;
             color: #6c757d;
         }
@@ -62,16 +74,19 @@
     </style>
 </head>
 <body>
-
-    <h1>Market Sentiment Analysis Using Continual Learning</h1>
-
-    <div class="container">
-        <div class="section">
+    <div class="sidebar">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#continualLearningContent">Continual Learning</a></li>
+            <li><a href="#marketSentimentContent">Market Sentiment Analysis</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <section id="continualLearningContent" class="section">
             <h2 onclick="toggleContent('continualLearningContent')"><i class="fas fa-book icon"></i>Continual Learning</h2>
-            <div id="continualLearningContent" class="content">
+            <div class="content">
                 <p><strong>What is continual learning?</strong><br>
                 Continual learning, also known as lifelong learning or incremental learning, is a machine learning paradigm that focuses on training models to acquire new knowledge and adapt to changing data over time. In contrast to traditional machine learning, where models are typically trained on fixed datasets and assume that the data distribution remains constant, continual learning is designed to handle evolving data distributions and continuously learn from new data while retaining knowledge from previous experiences. This is particularly important in scenarios where the data is non-stationary, meaning it changes over time.</p>
-
                 <p>Here are some key concepts and challenges associated with continual learning:</p>
                 <ul>
                     <li><strong>Catastrophic Forgetting:</strong> One of the main challenges in continual learning is preventing catastrophic forgetting...</li>
@@ -84,13 +99,12 @@
                 </ul>
                 <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/8466506/WpawVboTnBuokjqa.jpg?Expires=1730451909&Signature=OddgxFby2lzy2v0SrmzZ~fr4WL9PlIJngk~w50wioOH88-q66BuVqKpi7fLnke2n3h1S1CcAtf3dGcqulfrGoZm1lJnBV56Fi8Bel~T-xKo1Du3YJj~fnJFBRorbM5xrSPP9UxYAw6N6j-p3HHqDx63RQXkl-I-8cWi4w4Da1TUKKjtgMmdfRddsGo9mPMlUdo0Vp8C4hizT8-5mhh7kq3lng7SVYVNNh2zujsNAEgdNYj~ukltNB3Um4lcPC6qIWxo7NvXPqrAIdx1G7WJQQuw1tzPUzZaEV9odwzq5bzChC0CeejbSNU3pUrTeBjofUxqvb0U2kvaV7GAdBowgEA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Static vs Adaptive ML">
             </div>
-        </div>
-        <div class="section">
+        </section>
+        <section id="marketSentimentContent" class="section">
             <h2 onclick="toggleContent('marketSentimentContent')"><i class="fas fa-chart-line icon"></i>Market Sentiment Analysis Using Continual Learning</h2>
-            <div id="marketSentimentContent" class="content">
+            <div class="content">
                 <p><strong>Market Sentiment Analysis:</strong><br>
                 Market sentiment analysis involves evaluating the overall attitude of investors toward a particular market or asset. This analysis can be influenced by various factors, including news events, economic indicators, and social media trends. By applying continual learning techniques, models can adapt to shifts in market sentiment over time, improving their predictive capabilities.</p>
-
                 <p>Key aspects of market sentiment analysis include:</p>
                 <ul>
                     <li><strong>Data Sources:</strong> News articles, social media posts, and financial reports serve as primary data sources for sentiment analysis.</li>
@@ -99,16 +113,14 @@
                 </ul>
                 <img src="https://example.com/path/to/your/image.jpg" alt="Market Sentiment Analysis">
             </div>
-        </div>
+        </section>
     </div>
-
     <div class="footer">
         <p>© 2024 Market Sentiment Analysis. All rights reserved.</p>
     </div>
-
     <script>
         function toggleContent(id) {
-            var content = document.getElementById(id);
+            var content = document.getElementById(id).querySelector(".content");
             if (content.style.display === "none" || content.style.display === "") {
                 content.style.display = "block";
             } else {
@@ -116,6 +128,5 @@
             }
         }
     </script>
-
 </body>
 </html>
