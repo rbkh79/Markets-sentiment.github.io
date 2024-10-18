@@ -68,14 +68,23 @@
         <div class="section">
             <h2 onclick="toggleContent('marketSentimentContent')">Market Sentiment Analysis Using Continual Learning</h2>
             <div id="marketSentimentContent" class="content">
-                <p>Content related to market sentiment analysis goes here...</p>
+                <p><strong>Market Sentiment Analysis:</strong><br>
+                Market sentiment analysis involves evaluating the overall attitude of investors toward a particular market or asset. This analysis can be influenced by various factors, including news events, economic indicators, and social media trends. By applying continual learning techniques, models can adapt to shifts in market sentiment over time, improving their predictive capabilities.</p>
+
+                <p>Key aspects of market sentiment analysis include:</p>
+                <ul>
+                    <li><strong>Data Sources:</strong> News articles, social media posts, and financial reports serve as primary data sources for sentiment analysis.</li>
+                    <li><strong>Sentiment Scoring:</strong> Techniques such as natural language processing (NLP) are used to score sentiment from textual data.</li>
+                    <li><strong>Trend Analysis:</strong> Continuous learning helps in identifying emerging trends in market sentiment.</li>
+                </ul>
+                <img src="https://example.com/path/to/your/image.jpg" alt="Market Sentiment Analysis">
             </div>
         </div>
     </div>
 
     <script>
-        function toggleContent(contentId) {
-            var content = document.getElementById(contentId);
+        function toggleContent(id) {
+            var content = document.getElementById(id);
             if (content.style.display === "none" || content.style.display === "") {
                 content.style.display = "block";
             } else {
