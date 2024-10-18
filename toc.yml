@@ -1,7 +1,7 @@
-# In _toc.yml
+# Table of contents
 format: jb-book
 root: intro
+
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+  - file: continual_learning  # فایل برای بخش Continual Learning
+  - file: market_sentiment    # فایل برای بخش Market Sentiment Analysis
