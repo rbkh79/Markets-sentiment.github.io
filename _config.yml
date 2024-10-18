@@ -1,8 +1,8 @@
 # Book configuration
 title: "Market Sentiment Analysis"
-author: "Your Name"
+author: "Rezabahremand"
 logo: "path/to/logo.png"  # Path to logo (if you have one)
-copyright: "2024 Your Name"
+copyright: "2024 Rezabahremand"
 
 # Define the format of the book
 format:
@@ -24,7 +24,7 @@ format:
 
 # Custom sidebar and navigation settings
 html:
-  navbar_footer_text: "Created by Your Name"
+  navbar_footer_text: "Created by Rezabahremand"
   extra_navbar: "<p>My Custom Navbar</p>"
   extra_footer: "<p>My Custom Footer</p>"
   show_navbar_depth: 2  # Set the depth for table of contents in the sidebar
@@ -52,4 +52,4 @@ latex:
   latex_documents:
     - targetname: "mybook.tex"
       title: "Market Sentiment Analysis Book"
-      author: "Your Name"
+      author: "Rezabahremand"
