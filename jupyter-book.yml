@@ -1,0 +1,29 @@
+name: Deploy Jupyter Book to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Triggers the workflow when changes are pushed to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu OS for the job
+
+    steps:
+      - uses: actions/checkout@v2  # Checks out your GitHub repository
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Sets Python version
+
+      - name: Install dependencies
+        run: |
+          pip install jupyter-book ghp-import  # Install Jupyter Book and ghp-import
+
+      - name: Build Jupyter Book
+        run: jupyter-book build .  # Build the Jupyter Book
+
+      - name: Deploy to GitHub Pages
+        run: |
+          ghp-import -n -p -f _build/html  # Deploy the book to GitHub Pages
