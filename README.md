@@ -44,10 +44,3 @@ In this project, we use Continual Learning to analyze market sentiment from vari
 4. **Sentiment Analysis**: Use the trained model to perform sentiment analysis on new data.
 5. **Evaluation**: Evaluate the performance of the model and fine-tune as necessary.
 
-## Installation
-To get started with this project, follow these steps:
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/continual-learning-market-sentiment.git
-   cd continual-learning-market-sentiment
