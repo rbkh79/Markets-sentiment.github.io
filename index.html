@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Continual Learning and Market Sentiment Analysis</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Georgia, serif;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #fafafa;
+            line-height: 1.6;
         }
-        h1 {
+
+        h1, h2 {
+            color: #003366;
             text-align: center;
         }
+
+        h2 {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         .container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             margin-top: 20px;
         }
+
         .section {
-            width: 48%;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
         }
-        .section h2 {
-            cursor: pointer;
-            color: #007BFF;
-        }
+
         .content {
             display: none;
             margin-top: 10px;
         }
+
+        ul {
+            padding-left: 20px;
+        }
+
         img {
             width: 100%;
             border-radius: 8px;
             margin-top: 10px;
         }
+
+        a {
+            color: #1a73e8;
+        }
     </style>
 </head>
+
 <body>
 
     <h1>Market Sentiment Analysis Using Continual Learning</h1>
@@ -49,33 +67,44 @@
         <div class="section">
             <h2 onclick="toggleContent('continualLearningContent')">Continual Learning</h2>
             <div id="continualLearningContent" class="content">
-                <p><strong>What is continual learning?</strong><br>
-                Continual learning, also known as lifelong learning or incremental learning, is a machine learning paradigm that focuses on training models to acquire new knowledge and adapt to changing data over time. In contrast to traditional machine learning, where models are typically trained on fixed datasets and assume that the data distribution remains constant, continual learning is designed to handle evolving data distributions and continuously learn from new data while retaining knowledge from previous experiences. This is particularly important in scenarios where the data is non-stationary, meaning it changes over time.</p>
+                <p><strong>What is continual learning?</strong><br> Continual learning, also known as lifelong learning or
+                    incremental learning, is a machine learning paradigm that focuses on training models to acquire new knowledge
+                    and adapt to changing data over time.</p>
 
                 <p>Here are some key concepts and challenges associated with continual learning:</p>
                 <ul>
-                    <li><strong>Catastrophic Forgetting:</strong> One of the main challenges in continual learning is preventing catastrophic forgetting...</li>
+                    <li><strong>Catastrophic Forgetting:</strong> One of the main challenges in continual learning is preventing
+                        catastrophic forgetting...</li>
                     <li><strong>Replay Buffers:</strong> Replay buffers store a subset of past data...</li>
-                    <li><strong>Regularization:</strong> Techniques like elastic weight consolidation (EWC) and synaptic intelligence (SI)...</li>
-                    <li><strong>Architectural Approaches:</strong> Some approaches involve modifying the neural network architecture...</li>
-                    <li><strong>Transfer Learning:</strong> Transfer learning techniques can be adapted to continual learning scenarios...</li>
-                    <li><strong>Meta-Learning:</strong> Meta-learning is another approach that can help models adapt quickly to new tasks...</li>
-                    <li><strong>Evaluation Metrics:</strong> Developing appropriate evaluation metrics for continual learning is challenging...</li>
+                    <li><strong>Regularization:</strong> Techniques like elastic weight consolidation (EWC) and synaptic
+                        intelligence (SI)...</li>
+                    <li><strong>Architectural Approaches:</strong> Some approaches involve modifying the neural network
+                        architecture...</li>
+                    <li><strong>Transfer Learning:</strong> Transfer learning techniques can be adapted to continual learning
+                        scenarios...</li>
+                    <li><strong>Meta-Learning:</strong> Meta-learning is another approach that can help models adapt quickly to
+                        new tasks...</li>
+                    <li><strong>Evaluation Metrics:</strong> Developing appropriate evaluation metrics for continual learning is
+                        challenging...</li>
                 </ul>
-                <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/8466506/WpawVboTnBuokjqa.jpg?Expires=1730451909&Signature=OddgxFby2lzy2v0SrmzZ~fr4WL9PlIJngk~w50wioOH88-q66BuVqKpi7fLnke2n3h1S1CcAtf3dGcqulfrGoZm1lJnBV56Fi8Bel~T-xKo1Du3YJj~fnJFBRorbM5xrSPP9UxYAw6N6j-p3HHqDx63RQXkl-I-8cWi4w4Da1TUKKjtgMmdfRddsGo9mPMlUdo0Vp8C4hizT8-5mhh7kq3lng7SVYVNNh2zujsNAEgdNYj~ukltNB3Um4lcPC6qIWxo7NvXPqrAIdx1G7WJQQuw1tzPUzZaEV9odwzq5bzChC0CeejbSNU3pUrTeBjofUxqvb0U2kvaV7GAdBowgEA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Static vs Adaptive ML">
+                <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/8466506/WpawVboTnBuokjqa.jpg" alt="Static vs Adaptive ML">
             </div>
         </div>
+
         <div class="section">
             <h2 onclick="toggleContent('marketSentimentContent')">Market Sentiment Analysis Using Continual Learning</h2>
             <div id="marketSentimentContent" class="content">
-                <p><strong>Market Sentiment Analysis:</strong><br>
-                Market sentiment analysis involves evaluating the overall attitude of investors toward a particular market or asset. This analysis can be influenced by various factors, including news events, economic indicators, and social media trends. By applying continual learning techniques, models can adapt to shifts in market sentiment over time, improving their predictive capabilities.</p>
+                <p><strong>Market Sentiment Analysis:</strong><br> Market sentiment analysis involves evaluating the overall
+                    attitude of investors toward a particular market or asset.</p>
 
                 <p>Key aspects of market sentiment analysis include:</p>
                 <ul>
-                    <li><strong>Data Sources:</strong> News articles, social media posts, and financial reports serve as primary data sources for sentiment analysis.</li>
-                    <li><strong>Sentiment Scoring:</strong> Techniques such as natural language processing (NLP) are used to score sentiment from textual data.</li>
-                    <li><strong>Trend Analysis:</strong> Continuous learning helps in identifying emerging trends in market sentiment.</li>
+                    <li><strong>Data Sources:</strong> News articles, social media posts, and financial reports serve as primary
+                        data sources for sentiment analysis.</li>
+                    <li><strong>Sentiment Scoring:</strong> Techniques such as natural language processing (NLP) are used to score
+                        sentiment from textual data.</li>
+                    <li><strong>Trend Analysis:</strong> Continuous learning helps in identifying emerging trends in market
+                        sentiment.</li>
                 </ul>
                 <img src="https://example.com/path/to/your/image.jpg" alt="Market Sentiment Analysis">
             </div>
@@ -94,4 +123,5 @@
     </script>
 
 </body>
+
 </html>
