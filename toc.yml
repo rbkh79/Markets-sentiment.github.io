@@ -3,5 +3,5 @@ format: jb-book
 root: intro
 
 chapters:
-  - file: continual_learning  # فایل برای بخش Continual Learning
-  - file: market_sentiment    # فایل برای بخش Market Sentiment Analysis
+  - file: continual_learning  #  Continual Learning
+  - file: market_sentiment    #  Market Sentiment Analysis
