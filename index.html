@@ -64,6 +64,10 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            display: none; /* Initially hide all sections */
+        }
+        .section.active {
+            display: block; /* Show active section */
         }
         .section h2 {
             color: #007BFF;
@@ -86,6 +90,10 @@
         .icon {
             margin-right: 10px;
         }
+        .github-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -98,8 +106,8 @@
         <div class="sidebar">
             <h2>Table of Contents</h2>
             <ul>
-                <li><a href="#continual-learning">Continual Learning</a></li>
-                <li><a href="#market-sentiment">Market Sentiment Analysis</a></li>
+                <li><a href="#" onclick="showSection('continual-learning')">Continual Learning</a></li>
+                <li><a href="#" onclick="showSection('market-sentiment')">Market Sentiment Analysis</a></li>
             </ul>
         </div>
 
@@ -107,4 +115,49 @@
             <div id="continual-learning" class="section">
                 <h2><i class="fas fa-book icon"></i>What is Continual Learning?</h2>
                 <p>Continual learning, also known as lifelong learning or incremental learning, is a machine learning paradigm that focuses on training models to acquire new knowledge and adapt to changing data over time. In contrast to traditional machine learning, where models are typically trained on fixed datasets and assume that the data distribution remains constant, continual learning is designed to handle evolving data distributions and continuously learn from new data while retaining knowledge from previous experiences. This is particularly important in scenarios where the data is non-stationary, meaning it changes over time.</p>
-                <p>Here are some key concepts and challenges
+                <p>Here are some key concepts and challenges:</p>
+                <ul>
+                    <li><strong>Catastrophic Forgetting:</strong> One of the main challenges in continual learning is preventing catastrophic forgetting...</li>
+                    <li><strong>Replay Buffers:</strong> Replay buffers store a subset of past data...</li>
+                    <li><strong>Regularization:</strong> Techniques like elastic weight consolidation (EWC)...</li>
+                </ul>
+            </div>
+
+            <div id="market-sentiment" class="section">
+                <h2><i class="fas fa-chart-line icon"></i>Market Sentiment Analysis</h2>
+                <p>Market sentiment analysis involves evaluating the overall attitude of investors toward a particular market or asset. This analysis can be influenced by various factors, including news events, economic indicators, and social media trends.</p>
+                <p>Key aspects of market sentiment analysis include:</p>
+                <ul>
+                    <li><strong>Data Sources:</strong> News articles, social media posts, and financial reports...</li>
+                    <li><strong>Sentiment Scoring:</strong> Techniques such as natural language processing (NLP)...</li>
+                </ul>
+            </div>
+
+            <div class="github-buttons">
+                <h2>GitHub Tools</h2>
+                <a href="https://github.com/your-repo" target="_blank" class="btn btn-primary">View on GitHub</a>
+                <a href="https://github.com/your-repo/issues" target="_blank" class="btn btn-secondary">Report an Issue</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            var activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
