@@ -1,6 +1,6 @@
 # Table of contents  
 format: jb-book  
-root: continual_learning  
+root: intro  
 
 chapters:  
   - file: intro                 # Introduction  
