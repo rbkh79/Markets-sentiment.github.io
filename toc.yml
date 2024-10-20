@@ -5,7 +5,7 @@ root: intro
 entries:
   - file: intro
     title: Introduction
+  - file: continual_learning
+    title: Continual Learning
   - file: market_sentiment
     title: Market Sentiment Analysis
-  - file: another_section
-    title: Another Section
