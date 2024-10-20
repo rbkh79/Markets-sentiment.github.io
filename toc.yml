@@ -1,8 +1,11 @@
-# Table of contents  
-format: jb-book  
-root: continual_learning  
+# This is the root section of the book
+root: intro
 
-chapters:  
-  - file: intro                 # Introduction  
-  - file: continual_learning     # Continual Learning  
-  - file: market_sentiment       # Market Sentiment Analysis
+# Entries in the table of contents
+entries:
+  - file: intro
+    title: Introduction
+  - file: market_sentiment
+    title: Market Sentiment Analysis
+  - file: another_section
+    title: Another Section
