@@ -9,18 +9,17 @@ format:
   html:
     favicon: "path/to/favicon.ico"  # Path to favicon (optional)
     extra_css:
-      - _static/custom.css  # Add custom CSS file
+      - _static/custom.css  # Add custom CSS file (optional)
     theme:
       name: "sphinx_book_theme"
       options:
-        path_to_docs: "docs/"
         repository_url: "https://github.com/Markets-sentiment.github.io"  # Your GitHub repository URL
-        repository_branch: gh-pages  # Make sure this matches your branch
+        repository_branch: gh-pages  # Your repository's branch (use "main" or "gh-pages")
         use_edit_page_button: true  # Show 'edit this page' button
         use_repository_button: true  # Show 'link to repository' button
-        home_page_in_toc: true  # Include home page in the table of contents
-        extra_navbar: ""  # Custom content in the navbar
-        extra_footer: ""  # Custom footer content
+        home_page_in_toc: true  # Include home page in the TOC
+        extra_navbar: ""  # Optional: Custom content in the navbar
+        extra_footer: ""  # Optional: Custom footer content
 
 # Custom sidebar and navigation settings
 html:
@@ -29,27 +28,23 @@ html:
   extra_footer: "<p>My Custom Footer</p>"
   show_navbar_depth: 2  # Set the depth for table of contents in the sidebar
 
-# Define the Table of Contents (TOC)
-toc: "toc.yml"
-  includehidden: false  # Whether to show hidden sections in the TOC
-  sections:
-    - file: intro
-    - file: continual_learning
-    - file: market_sentiment
-
 # Enable Jupyter Notebook execution
 execute:
   execute_notebooks: auto  # Automatically execute notebooks when building
 
+# Table of Contents (TOC) configuration is handled via 'toc.yml', not here.
+toc:
+  includehidden: false  # Do not show hidden sections in the TOC
+
 # External links
 repository:
   url: "https://github.com/Markets-sentiment.github.io"
-  path_to_book: "path/to/book"
+  path_to_book: ""
 
 # LaTeX specific configurations (optional)
 latex:
   latex_engine: xelatex
   latex_documents:
     - targetname: "mybook.tex"
-      title: "Market Sentiment Analysis Book"
+      title: "Market Sentiment Analysis"
       author: "Rezabahremand"
