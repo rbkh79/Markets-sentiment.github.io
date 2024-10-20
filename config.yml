@@ -30,7 +30,7 @@ html:
   show_navbar_depth: 2  # Set the depth for table of contents in the sidebar
 
 # Define the Table of Contents (TOC)
-toc:"toc.yml"
+toc: "toc.yml"
   includehidden: false  # Whether to show hidden sections in the TOC
   sections:
     - file: intro
