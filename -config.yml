@@ -15,7 +15,7 @@ format:
       options:
         path_to_docs: "docs/"
         repository_url: "https://github.com/Markets-sentiment.github.io"  # Your GitHub repository URL
-        repository_branch: main  # Your repository's main branch
+        repository_branch: gh-pages  # Make sure this matches your branch
         use_edit_page_button: true  # Show 'edit this page' button
         use_repository_button: true  # Show 'link to repository' button
         home_page_in_toc: true  # Include home page in the table of contents
